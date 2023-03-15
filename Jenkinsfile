@@ -17,7 +17,6 @@ pipeline {
                 checkout scm
 			}
         }
-    }
         stage("Build") {
             steps {
                 sh 'docker-compose build web'
@@ -40,4 +39,5 @@ pipeline {
                 sh 'docker-compose up -d'
         	}
     	}
+	}
 }
