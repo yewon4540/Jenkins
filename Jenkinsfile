@@ -17,3 +17,14 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'building..'
+        }
+        success {
+            echo 'success'
+        }
+        failure {
+            echo 'failure'
+        }
+    }
